@@ -1,4 +1,5 @@
 import 'package:nfeapp_flutter/app/modules/home/modules/cart/cubit/order/order_bloc_cubit.dart';
+import 'package:nfeapp_flutter/app/repositories/ccRepresentante/cc_representante_repository.dart';
 import 'package:nfeapp_flutter/app/repositories/commission/commission_repository.dart';
 import 'package:nfeapp_flutter/app/repositories/customer/customer_repository.dart';
 import 'package:nfeapp_flutter/app/repositories/finishCard/finish_cart_repository.dart';
@@ -15,6 +16,7 @@ import 'core/helpers/environments.dart';
 import 'core/rest/http/http_rest_client.dart';
 import 'modules/home/modules/cart/cubit/finishCard/finish_bloc_cubit.dart';
 import 'modules/login/cubit/login_bloc_cubit.dart';
+import 'modules/profile/modules/ccRepresentante/cubit/cc_representante_bloc_cubit.dart';
 import 'modules/profile/modules/commission/cubit/commission_bloc_cubit.dart';
 import 'modules/profile/modules/consultProduct/cubit/consult_product_bloc_cubit.dart';
 import 'modules/profile/modules/customer/cubit/customer_bloc_cubit.dart';
@@ -96,6 +98,12 @@ class _BlocInjectionState extends State<BlocInjection> {
               create:
                   (_) =>
                       CommissionBlocCubit(repository: CommissionRepository()),
+            ),
+            BlocProvider<CCRepresentanteBlocCubit>(
+              create:
+                  (_) => CCRepresentanteBlocCubit(
+                    repository: CCRepresentanteRepository(),
+                  ),
             ),
             BlocProvider<FinishCartCubit>(
               create:

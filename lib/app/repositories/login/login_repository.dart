@@ -22,7 +22,7 @@ class LoginRepository implements ILoginRepository {
       await prefs.remove('port');
 
       final url =
-          'http://prosystem.dyndns-work.com:9090/datasnap/rest/TserverAPPnfe/LoginEmpresa/$cnpj';
+          'http://aplicativo.dyndns-work.com:9090/datasnap/rest/TserverAPPnfe/LoginEmpresa/$cnpj';
       final response = await http.get(Uri.parse(url));
       final jsonData = jsonDecode(response.body);
 

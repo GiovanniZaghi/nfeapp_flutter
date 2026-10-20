@@ -8,6 +8,7 @@ import 'package:get/get.dart';
 
 import 'modules/home/modules/cart/finish_cart_page.dart';
 import 'modules/login/login_page.dart';
+import 'modules/profile/modules/ccRepresentante/cc_representante_page.dart';
 import 'modules/profile/modules/commission/commission_page.dart';
 import 'modules/splash/splash_page.dart';
 
@@ -20,6 +21,7 @@ class Routes {
   static const CUSTOMER = "/customer";
   static const CONSULT_PRODUCT = "/ConsultProduct";
   static const COMMISSION = "/Commission";
+  static const CC_REPRESENTANTE = "/CCRepresentante";
   static const FINISH_CART = "/finish_cart";
   static const ADD_CART = "/add_cart";
 }
@@ -37,6 +39,10 @@ class AppPages {
     ),
     GetPage(name: Routes.CUSTOMER, page: () => const CustomerPage()),
     GetPage(name: Routes.COMMISSION, page: () => const CommissionPage()),
+    GetPage(
+      name: Routes.CC_REPRESENTANTE,
+      page: () => const CCRepresentantePage(),
+    ),
     GetPage(name: Routes.FINISH_CART, page: () => const FinishCartPage()),
     GetPage(name: Routes.ADD_CART, page: () => ProductListPage()),
   ];

@@ -156,6 +156,14 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                     ListTile(
                       leading: Icon(
+                        Icons.account_balance_wallet_outlined,
+                        color: colorScheme.primary,
+                      ),
+                      title: const Text("Crédito Representante"),
+                      onTap: () => Get.toNamed("/CCRepresentante"),
+                    ),
+                    ListTile(
+                      leading: Icon(
                         Icons.person_search_rounded,
                         color: colorScheme.primary,
                       ),

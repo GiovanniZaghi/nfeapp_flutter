@@ -42,7 +42,9 @@ class ConsultProductRepository implements IConsultProductRepository {
 
     print("Qual tabela tem ? ${tabelaSelecionada}");
 
-    final url = Uri.parse('$baseUrl/PesquisaProd//${tabelaSelecionada.toUpperCase()}');
+    final url = Uri.parse(
+      '$baseUrl/PesquisaProd//${tabelaSelecionada.toUpperCase()}',
+    );
 
     try {
       final response = await http.get(url);
